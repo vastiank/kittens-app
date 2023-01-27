@@ -1,0 +1,20 @@
+.modal__kitten__container {
+  & .modal__kitten__content {
+    display: flex;
+    align-items: center;
+    margin: 25px;
+  }
+
+  & .modal__kitten__info {
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  & .modal__kitten__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-radius: 10px;
+  }
+}

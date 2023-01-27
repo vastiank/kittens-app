@@ -1,8 +1,22 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { shallow } from "enzyme";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+import App from "./App";
+
+jest.mock("axios", () => {
+  const axiosInstance = {
+    get: jest.fn(),
+    interceptors: {
+      response: { use: jest.fn() },
+    },
+  };
+  return {
+    create: jest.fn(() => axiosInstance),
+  };
+});
+
+describe("App component", () => {
+  it("should render AppComponent", () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper).toBeDefined();
+  });
 });

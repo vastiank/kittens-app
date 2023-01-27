@@ -1,0 +1,36 @@
+.loading__container {
+  padding: 10px;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+.loading-spinner::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 8px;
+  left: 8px;
+  border-radius: 50%;
+  border: 6px solid var(--white);
+  border-top-color: var(--purple-third);
+  animation: loading-spinner 0.8s linear infinite;
+}
+
+.loading__title {
+  color: var(--white);
+  margin: 20px 0;
+  text-align: center;
+}
+
+@keyframes loading-spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
