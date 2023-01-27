@@ -24,7 +24,13 @@ http://localhost:3000
 
 ## Run App with Node :package:
 
+## Install npm modules
+
 In the project directory, you can run:
+
+### `npm install`
+
+Then in the project directory, you can run:
 
 ### `npm start`
 
@@ -33,7 +39,7 @@ http://localhost:3000
 
 
 
-### ¡Now you can run KittensApp! :smiley_cat:
+# ¡Now you can run KittensApp! :smiley_cat:
 
 
 
